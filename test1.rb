@@ -1,12 +1,10 @@
-# Вывести в консоль, 30 раз "<3 ruby", каждый в новой строке, 10ый, 20ый, и 25ый вывод вывести просто "ruby".
+# frozen_string_literal: true
 
+# Print word Ruby
 class LoveRuby
-  def self.print
+  def self.print_ruby
     30.times do |i|
-      puts i == 10 || i == 20 || i == 25 ? "#{i} ruby" : "#{i} <3 ruby"
+      puts [10, 20, 25].include?(i) ? "#{i} ruby" : "#{i} <3 ruby"
     end
   end
 end
-
-# LoveRuby.print
-

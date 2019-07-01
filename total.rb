@@ -9,7 +9,7 @@ class Total
   def self.print_task(n)
     case n
     when '1'
-      LoveRuby.print
+      LoveRuby.print_ruby
     when '2'
       puts 'Введите радиус окружности'
       radius = gets.chomp.to_i
