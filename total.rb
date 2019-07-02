@@ -13,7 +13,7 @@ class Total
     when '2'
       puts 'Введите радиус окружности'
       radius = gets.chomp.to_i
-      Circle.printCircle(radius)
+      Circle.circ(radius)
     when '3'
       puts 'Введите размер матрицы'
       n = gets.chomp.to_i
