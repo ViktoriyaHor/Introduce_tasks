@@ -1,12 +1,10 @@
-# Вывести в консоль матрицу с еденицами по диагонали. Размер задается с консоли. Пример:
-# require 'matrix'
-# matrix = Matrix.diagonal(1, 1, 1, 1, 1)
-# print matrix
+# frozen_string_literal: true
 
+# Print Matrix
 class Matrix
-  def self.print_matrix(n)
-    n.times do |i|
-      n.times do |j|
+  def self.print_matrix(num)
+    num.times do |i|
+      num.times do |j|
         if i == j
           print '1'
         else
@@ -17,9 +15,3 @@ class Matrix
     end
   end
 end
-
-# puts 'Введите размер матрицы'
-# n = gets.chomp.to_i
-# Matrix.printMatrix(n)
-
-
