@@ -9,21 +9,14 @@
 #    => 'i-love-ruby'
 # сделать вторым аргументом разделитель
 class Str
-  def self.formatize(str)
-    puts str.split.map(&:capitalize).join('')
-  end
-  # TODO: remove below
-  def self.formatize1(str)
-    puts str.split.join('_')
-  end
-  def self.formatize2(str)
-    puts str.split.join('-')
+  def self.formatize(str, arg)
+    case arg
+    when ':camel'
+      puts str.split.map(&:capitalize).join('')
+    when ':underscore'
+      puts str.split.join('_')
+    when ':css'
+      puts str.split.join('-')
+    end
   end
 end
-
-# puts 'Введите строку'
-# str = gets.chomp
-# Str.formatize(str)
-# formatize(str)
-# formatize1(str)
-# formatize2(str)
