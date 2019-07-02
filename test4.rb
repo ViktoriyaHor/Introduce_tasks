@@ -1,20 +1,18 @@
-# Написать рекурсивный метод для поиска значения ключа key9 в хеше: сделать !h.empty? && h.is_a?(Hash) а потом раздвоить условие
-class Hash_n
+# frozen_string_literal: true
+
+# Print key value for hash
+class HashName
+  def self.emp?(hash1)
+    !hash1.empty? && hash1.is_a?(Hash)
+  end
+
   def self.ihash(hash, arg)
-    if !hash.empty? && hash.is_a?(Hash) && hash.has_key?(arg)#не пустой
+    if emp?(hash) && hash.key?(arg)
       puts hash.fetch(arg)
-    elsif !hash.empty? && hash.is_a?(Hash) && !hash.has_key?(arg)
+    elsif emp?(hash) && !hash.key?(arg)
       hash.each_value do |value|
-        ihash(value,arg)
+        ihash(value, arg)
       end
     end
   end
 end
-
-# hash = { key1: {}, key2: {}, key3: { key4: 'str', key5: 'str2', key6: { key7: { key8: 1, key9: [2]} } }}
-# puts 'Введите ключ'
-# key = gets.chomp.to_sym
-# H.ihash(hash,key)
-
-
-

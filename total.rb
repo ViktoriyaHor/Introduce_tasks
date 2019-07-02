@@ -22,7 +22,7 @@ class Total
       hash = { key1: {}, key2: {}, key3: { key4: 'str', key5: 'str2', key6: { key7: { key8: 1, key9: [2]} } }}
       puts 'Введите ключ'
       key = gets.chomp.to_sym
-      Hash_n.ihash(hash,key)
+      HashName.ihash(hash, key)
     when '5'
       puts 'Введите строку'
       str = gets.chomp
